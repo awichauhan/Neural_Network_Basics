@@ -125,6 +125,16 @@ def main():
             learning_rate
         )
 
+        # After the training loop
+        u, v, z, prediction, loss = forward_pass(
+            x1,
+            x2,
+            w1,
+            w2,
+            bias,
+            y
+        )
+
         # Print progress after every 100 iterations
         if iteration % 100 == 0:
             print(
